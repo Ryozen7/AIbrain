@@ -24,7 +24,7 @@ const handleRegister = ( req, res, db, bcrypt )=> {
 				})
 		})
 		.then(trx.commit)
-		.catch(trans.rollback)
+		.catch(trx.rollback)
 	})
 	.catch( err => res.status(404).json('Email Address Already Exist. Try a different one!'))
 }
