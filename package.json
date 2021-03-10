@@ -20,5 +20,13 @@
     "express": "^4.17.1",
     "knex": "^0.95.1",
     "pg": "^8.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryozen7/AIbrain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ryozen7/AIbrain/issues"
+  },
+  "homepage": "https://github.com/Ryozen7/AIbrain#readme"
 }
