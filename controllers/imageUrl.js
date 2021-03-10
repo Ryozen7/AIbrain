@@ -1,4 +1,4 @@
-import Clarifai from 'clarifai';
+const Clarifai = require('clarifai');
 const app = new Clarifai.App({
   apiKey: '4427d1e22003495cb6bf652565c79661'
 });
@@ -11,4 +11,6 @@ const handleApiCall = (req, res) => {
 	})
 	.catch(err => res.status(400).json('Unable fetch API.'))
 }
-export default handleApiCall;
+module.exports = {
+  handleApiCall: handleApiCall
+};

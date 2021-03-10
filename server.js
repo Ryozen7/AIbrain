@@ -1,13 +1,15 @@
-import express from 'express';
-import bcrypt from 'bcrypt-nodejs';
-import cors from 'cors';
-import knex from 'knex';
-import handleRegister from './controllers/register.js';
-import handleSignin from './controllers/signin.js';
-import handleProfile from './controllers/profile.js';
-import handleImage from './controllers/image.js';
-import handleApiCall from './controllers/imageUrl.js';
-import { Pool } from 'pg';
+const express = require('express');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt-nodejs');
+const cors = require('cors');
+const knex = require('knex');
+
+const register = require('./controllers/register');
+const signin = require('./controllers/signin');
+const profile = require('./controllers/profile');
+const image = require('./controllers/image');
+const imageurl = require('./controllers/imageUrl');
+const { Pool } = require('pg');
 
 const db = new Pool({
   connectionString: process.env.DATABASE_URL,
