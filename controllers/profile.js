@@ -11,4 +11,6 @@
 	 	.catch(err => res.status(400).json('Error! Something is wrong.'))
 }
 
-export default handleProfile;
+module.exports = {
+  handleProfile: handleProfile
+}

@@ -9,7 +9,7 @@ const handleApiCall = (req, res) => {
 	.then(data => {
 		res.json(data)
 	})
-	.catch(err => res.status(400).json('Unable fetch API.'))
+	.catch(err => res.status(400).json(false))
 }
 module.exports = {
   handleApiCall: handleApiCall
